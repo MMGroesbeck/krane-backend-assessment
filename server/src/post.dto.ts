@@ -1,5 +1,5 @@
 export class PostDto {
     title: string;
-    body: string;
+    text_body: string;
     createdAt: Date;
 }

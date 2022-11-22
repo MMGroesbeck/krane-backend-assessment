@@ -1,4 +1,4 @@
-import { Injectable, Body } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { PrismaClient, Post } from '@prisma/client';
 import { PostDto } from './post.dto';
 
@@ -15,7 +15,7 @@ export class PostsService {
     const thisPost = await this.prisma.post.create({
       data: {
         title: thisPostDto.title,
-        textBody: thisPostDto.body,
+        textBody: thisPostDto.text_body,
         createdAt: thisPostDto.createdAt}
     })
     return thisPost;
